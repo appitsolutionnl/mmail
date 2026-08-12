@@ -1,0 +1,33 @@
+.logo {
+  display: block !important;
+  object-fit: cover !important;
+  background: none !important;
+  color: transparent !important;
+  border-radius: 10px !important;
+}
+
+/* Keep the portrait screenshots large enough to read without distortion. */
+.screens {
+  grid-template-columns: repeat(2, minmax(0, 400px));
+  justify-content: center;
+  gap: 48px;
+}
+
+.screens figure:nth-child(even) {
+  margin-top: 0;
+}
+
+.screens img,
+.hero-phone img {
+  width: 100%;
+  height: auto !important;
+  aspect-ratio: 1320 / 2868;
+  object-fit: contain;
+}
+
+@media (max-width: 700px) {
+  .screens {
+    grid-template-columns: minmax(0, 400px);
+    gap: 30px;
+  }
+}
